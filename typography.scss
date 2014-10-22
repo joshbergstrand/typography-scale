@@ -1,0 +1,216 @@
+@import 'reset';
+@import 'breakpoints';
+@import 'other-styles';
+
+/* Variables */
+
+/* Font-family */
+$font-stack-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-stack-serif: Georgia, Times, "Times New Roman", serif;
+
+/* Color */
+$color-primary: #444;
+$color-secondary: #777;
+$color-tertiary: #999;
+$color-error: red;
+$color-confirm: green;
+
+/* Font-size */
+
+    /* X-Large screens */
+    $fs-larger-xl:36px;
+    $fs-largest-xl:44px;
+    $fs-jumbo-xl:56px;
+
+    /* Large screens and up */
+    $fs-larger-l:32px;
+    $fs-largest-l:40px;
+    $fs-jumbo-l:48px;
+
+    /* Medium screens and up */
+    $fs-larger-m:28px;
+    $fs-largest-m:36px;
+    $fs-jumbo-m:44px;
+
+    /* Small screens and up */
+        /* No font-size changes have been defined at this breakpoint */
+
+    /* X-Small screens and up */
+    $fs-micro-xs:10px;
+    $fs-smallest-xs:11px;
+    $fs-smaller-xs:12px;
+    $fs-small-xs:14px;
+    $fs-base-xs:16px;
+    $fs-large-xs:18px;
+    $fs-larger-xs:24px;
+    $fs-largest-xs:30px;
+    $fs-jumbo-xs:36px;
+
+/* Line-height */
+$lh-tightest:1.05;
+$lh-tighter:1.111;
+$lh-tight:1.125;
+$lh-normal:1.222;
+$lh-loose:1.25;
+$lh-looser:1.375;
+$lh-loosest:1.4;
+
+/* Letter-spacing */
+$ls-tightest:-3px;
+$ls-tighter:-2px;
+$ls-tight:-1px;
+$ls-normal:normal;
+$ls-loose:1px;
+$ls-looser:2px;
+$ls-loosest:3px;
+
+/* Font-weight */
+$fw-lightest:100;
+$fw-lighter:200;
+$fw-light:300;
+$fw-normal:normal;
+$fw-bold:700;
+$fw-bolder:800;
+$fw-boldest:900;
+
+
+/* Styles */
+
+// Global defaults
+
+body {
+  font-size:$fs-base-xs;
+  font-family:$font-stack-sans;
+  color:$color-primary;
+  line-height:$lh-normal;
+  letter-spacing:$ls-normal;
+}
+
+/* Default type styles, small screens and up */
+h1 {
+  color:$color-secondary;
+  font-family:$font-stack-serif;
+  font-size:$fs-jumbo-xs;
+  font-weight:$fw-lighter;
+  line-height:$lh-tightest;
+  letter-spacing:$ls-tighter;
+}
+
+h2 {
+  font-size:$fs-largest-xs;
+  font-weight:$fw-light;
+  line-height:$lh-tightest;
+  letter-spacing:$ls-tight;
+}
+
+h3 {
+  font-size:$fs-larger-xs;
+  font-weight:$fw-light;
+  line-height:$lh-tight;
+  letter-spacing:$ls-tight;
+}
+
+h4 {
+  font-size:$fs-large-xs;
+  font-weight:$fw-bold;
+  line-height:$lh-loose;
+  letter-spacing:$ls-normal;
+}
+
+h5 {
+  font-size:$fs-base-xs;
+  font-weight:$fw-normal;
+  line-height:$lh-loose;
+  letter-spacing:$ls-normal;
+}
+
+h6 {
+  font-size:$fs-smaller-xs;
+  font-weight:$fw-bold;
+  line-height:$lh-tightest;
+  letter-spacing:$ls-looser;
+    
+  text-transform: uppercase;
+}
+
+p {
+  font-size:$fs-base-xs;
+  font-weight:$fw-normal;
+  line-height:$lh-loosest;
+  letter-spacing:$ls-normal;
+}
+
+.small {
+  font-size:$fs-small-xs;
+  font-weight:$fw-normal;
+  line-height:$lh-looser;
+  letter-spacing:$ls-normal;
+}
+
+.smaller {
+  font-size:$fs-smaller-xs;
+  font-weight:$fw-normal;
+  line-height:$lh-looser;
+  letter-spacing:$ls-normal;
+}
+
+.smallest {
+  font-size:$fs-smallest-xs;
+  font-weight:$fw-normal;
+  line-height:$lh-loose;
+  letter-spacing:$ls-normal;
+}
+
+.micro {
+  font-size:$fs-micro-xs;
+  font-weight:$fw-normal;
+  line-height:$lh-normal;
+  letter-spacing:$ls-normal;
+}
+
+/* Type styles, medium screens and up */
+@media screen and (min-width: $screens-medium) {
+    h1 {
+        font-size:$fs-jumbo-m;
+    }
+
+    h2 {
+        font-size:$fs-largest-m;
+    }
+
+    h3 {
+        font-size:$fs-larger-m;
+    }
+}
+
+/* Type styles, large screens and up */
+@media screen and (min-width: $screens-large) {
+    h1 {
+        font-size:$fs-jumbo-l;
+    }
+
+    h2 {
+        font-size:$fs-largest-l;
+    }
+
+    h3 {
+        font-size:$fs-larger-l;
+    }
+}
+
+/* Type styles, x-large screens and up */
+@media screen and (min-width: $screens-xlarge) {
+    h1 {
+        font-size:$fs-jumbo-xl;
+    }
+
+    h2 {
+        font-size:$fs-largest-xl;
+    }
+
+    h3 {
+        font-size:$fs-larger-xl;
+    }
+}
+
+
