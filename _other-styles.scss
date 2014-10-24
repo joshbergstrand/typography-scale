@@ -1,11 +1,18 @@
-/* This has nothing to do with typography */
+* + * {
+    margin-top:1.4em;
+}
+
+body {
+    margin:0;
+    padding:0;
+}
 
 .container {
+    margin:0 auto;
     padding:20px;
 }
 
 .row {
     clear:both;
-    margin-bottom:20px;
     width:100%;
 }
