@@ -1,0 +1,110 @@
+/* Breakpoints @min-widths */
+/* Font-sizes */
+/* Letter-spacing */
+/* Font-weight */
+/* Font-family */
+/* Colors */
+/* Global defaults */
+body {
+  font-size: 1em;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #444;
+  line-height: 1.25;
+  letter-spacing: normal;
+  margin: 0;
+  padding: 0;
+  text-rendering: optimizeLegibility; }
+
+* + *, .row + .row {
+  margin-top: 20px;
+  /*Need to improve this. This is currently a fixed value and doesn't scale up*/ }
+
+.container {
+  margin: 0 auto;
+  padding: 0 1em; }
+
+.row {
+  background: rgba(0, 238, 255, 0.1); }
+
+/* Headers */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 20px 0;
+  line-height: 1.25;
+  /* Transitions between breakpoints */
+  moz-transition: all 0.5s ease-in-out;
+  o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  webkit-transition: all 0.5s ease-in-out; }
+
+h1 {
+  font-size: 3.05176em;
+  font-weight: 900;
+  letter-spacing: -3px; }
+
+h2 {
+  font-size: 2.44141em;
+  font-weight: 800;
+  letter-spacing: -2px; }
+
+h3 {
+  font-size: 1.95313em;
+  font-weight: 800;
+  letter-spacing: -2px; }
+
+h4 {
+  font-size: 1.5625em;
+  font-weight: 700;
+  letter-spacing: -1px; }
+
+h5 {
+  font-size: 1.25em;
+  font-weight: 700;
+  letter-spacing: -1px; }
+
+h6 {
+  font-size: 1em;
+  font-weight: 700;
+  letter-spacing: normal; }
+
+/* Body copy */
+p {
+  font-size: 1em;
+  line-height: 1.25;
+  padding-bottom: 20px;
+  margin: 0; }
+
+/* Smaller type */
+.small, label, th, td {
+  font-size: 0.8em;
+  line-height: 1.25; }
+
+.smaller {
+  font-size: 0.64em;
+  line-height: 1.25; }
+
+.smallest {
+  font-size: 0.512em;
+  line-height: 1.25; }
+
+/* Type styles, small screens and up */
+@media screen and (min-width: 500px) {
+  body {
+    font-size: 1.25em;
+    /* @small base font-size moves one value up the scale */ } }
+/* Type styles, medium screens and up */
+@media screen and (min-width: 600px) {
+  body {
+    font-size: 1.5625em;
+    /* @medium base font-size moves two values up the scale */ } }
+/* Type styles, large screens and up */
+@media screen and (min-width: 900px) {
+  body {
+    font-size: 1.95313em; } }
+/* Type styles, x-large screens and up */
+@media screen and (min-width: 1200px) {
+  body {
+    font-size: 2.44141em;
+    /* @x-large base font-size moves 4 values up the scale */ } }
+
+/*# sourceMappingURL=style.css.map */

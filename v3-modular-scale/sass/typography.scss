@@ -1,0 +1,177 @@
+@import 'modular-scale/modular-scale';
+@import 'breakpoints';
+// Typography is dependent on the above files.   
+
+// Modular-scale settings
+$ms-base: 1em;
+$ms-ratio: $major-third;
+$ms-line-height: #{1.25 * 16}px; // Multiply ratio by base px value to set line height
+
+/* Font-sizes */
+$fs-xxsm: ms(-3);
+$fs-xsm: ms(-2);
+$fs-sm: ms(-1);
+$fs-norm: $ms-base;
+$fs-med: ms(1);
+$fs-lrg: ms(2);
+$fs-xlrg: ms(3);
+$fs-xxlrg: ms(4);
+$fs-xxxlrg: ms(5);
+
+/* Letter-spacing */
+$ls-tightest:-3px;
+$ls-tighter:-2px;
+$ls-tight:-1px;
+$ls-normal:normal;
+$ls-loose:1px;
+$ls-looser:2px;
+$ls-loosest:3px;
+
+/* Font-weight */
+$fw-lightest:100;
+$fw-lighter:200;
+$fw-light:300;
+$fw-normal:normal;
+$fw-bold:700;
+$fw-bolder:800;
+$fw-boldest:900;
+
+/* Font-family */
+$font-stack-primary: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-stack-secondary: Georgia, Times, "Times New Roman", serif;
+
+/* Colors */
+$color-primary:#444;
+
+/* Global defaults */
+
+body {
+    font-size:$ms-base;
+    font-family:$font-stack-primary;
+    color:$color-primary;
+    line-height:$ms-ratio;
+    letter-spacing:$ls-normal;
+    margin:0;
+    padding:0;
+    text-rendering: optimizeLegibility;
+}
+
+* + *, .row + .row {
+    margin-top:$ms-line-height; // Space between child elements is equal to the height of one row. 
+    /*Need to improve this. This is currently a fixed value and doesn't scale up*/
+}
+
+.container {
+    margin:0 auto;
+    padding:0 $ms-base; // scale padding with type
+}
+
+.row {
+    background:rgba(0,238,255,0.1); // background on Foundation's rows to make line-height and rhythmn visible
+}
+
+/* Headers */
+
+h1,h2,h3,h4,h5,h6 {
+    margin:0;
+    padding:$ms-line-height 0;
+    line-height:$ms-ratio; 
+    /* Transitions between breakpoints */
+    moz-transition: all 0.5s ease-in-out;
+	o-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+	webkit-transition: all 0.5s ease-in-out;
+}
+
+h1 {
+    font-size: $fs-xxxlrg;
+    font-weight:$fw-boldest;
+    letter-spacing: $ls-tightest;   
+}
+
+h2 {
+    font-size: $fs-xxlrg;
+    font-weight:$fw-bolder;
+    letter-spacing: $ls-tighter;    
+}
+
+h3 {
+    font-size: $fs-xlrg;
+    font-weight:$fw-bolder;
+    letter-spacing: $ls-tighter;    
+}
+
+h4 {
+    font-size: $fs-lrg;
+    font-weight:$fw-bold;
+    letter-spacing: $ls-tight;    
+}
+
+h5 {
+    font-size: $fs-med;
+    font-weight:$fw-bold;
+    letter-spacing: $ls-tight;   
+}
+
+h6 {
+    font-size: $fs-norm;
+    font-weight:$fw-bold;
+    letter-spacing: $ls-normal;   
+}
+
+/* Body copy */
+
+p {
+    font-size:$fs-norm;
+    line-height:$ms-ratio;
+    padding-bottom:$ms-line-height; 
+    margin:0;
+}
+
+/* Smaller type */
+
+.small, label, th, td {
+    font-size: $fs-sm;
+    line-height:$ms-ratio;
+}
+
+.smaller {
+    font-size: $fs-xsm;
+    line-height:$ms-ratio;
+}
+
+.smallest {
+    font-size: $fs-xxsm;
+    line-height:$ms-ratio;
+}
+
+/* Type styles, small screens and up */
+@media screen and (min-width: $screens-small) {
+    body {
+            font-size: $fs-med;      /* @small base font-size moves one value up the scale */
+    }
+}
+
+/* Type styles, medium screens and up */
+@media screen and (min-width: $screens-medium) {
+    body {
+            font-size: $fs-lrg;      /* @medium base font-size moves two values up the scale */
+    }
+}
+
+/* Type styles, large screens and up */
+@media screen and (min-width: $screens-large) {
+    body {
+            font-size: $fs-xlrg      /* @large base font-size moves three values up the scale */
+    }
+}
+
+/* Type styles, x-large screens and up */
+@media screen and (min-width: $screens-xlarge) {
+    body {
+            font-size: $fs-xxlrg;      /* @x-large base font-size moves 4 values up the scale */
+    }
+}
+
+
+
